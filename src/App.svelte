@@ -8,9 +8,9 @@
 	<h2>Coming soon!</h2>
 
 	<div id="features">
-		<Feat title="See what chat's watching!" src="/images/embeds.png" alt="Screenshot showing a list of top 5 embeds."></Feat>
-		<Feat title="Get alerted if your message has ban phrases!" src="/images/phrases.png" alt="Screenshot showing a red textbox with a banned phrase."></Feat>
-		<Feat title="See nukes and mutelinks mode!" src="/images/nukes.png" alt="Screenshot showing a nuke icon and a mutelinks icon."></Feat>
+		<Feat title="See what chat's watching!" src="/utilities/images/embeds.png" alt="Screenshot showing a list of top 5 embeds."></Feat>
+		<Feat title="Get alerted if your message has ban phrases!" src="/utilities/images/phrases.png" alt="Screenshot showing a red textbox with a banned phrase."></Feat>
+		<Feat title="See nukes and mutelinks mode!" src="/utilities/images/nukes.png" alt="Screenshot showing a nuke icon and a mutelinks icon."></Feat>
 	</div>
 	
 	<div id="install">
