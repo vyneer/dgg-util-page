@@ -1,11 +1,37 @@
 <script>
 	import Feat from "./Feat.svelte";
+
+	let installUrl;
+	let version;
+
+	let promise = getScriptInfo();
+
+	async function getScriptInfo() {
+		let response = await fetch(`https://vyneer.me/tools/script`);
+		if (response.ok) {
+			let data = await response.json();
+			installUrl = data['link'];
+			version = data['version'];
+			return response.ok;
+		} else {
+			version = "error";
+			throw new Error(response.status);
+		}
+	}
 </script>
 
 <main>
 	<h1>d.gg utilities</h1>
 
-	<h2>Coming soon!</h2>
+	{#await promise}
+		<h2>Getting script version...</h2>
+	{:then}
+		{#if version != "error"}
+			<h2><a href="{installUrl}" target="_blank">Install version {version}</a></h2>
+		{/if}
+	{:catch error}
+		<h2>HTTP error: {error}</h2>
+	{/await}
 
 	<div id="features">
 		<Feat title="See what chat's watching!" src="/utilities/images/embeds.png" alt="Screenshot showing a list of top 5 embeds."></Feat>
