@@ -20,6 +20,10 @@
 	}
 </script>
 
+<header>
+	<a href="https://vyneer.me"><i class="home-button fas fa-home"></i></a>
+</header>
+
 <main>
 	<h1>d.gg utilities</h1>
 
@@ -51,6 +55,12 @@
 		</span>	
 	</div>
 </main>
+
+<footer>
+	<div style="float: right;">
+		<a class="github-button" href="https://github.com/vyneer/dgg-chat-gui-scripts" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-size="large" aria-label="Contribute to vyneer/dgg-chat-gui-scripts on GitHub">Contribute</a>
+	</div>
+</footer>
 
 <style>
 	:global(body) {
@@ -107,6 +117,11 @@
 
 	#install-text {
 		align-self: center;
+	}
+
+	.home-button {
+		color: white;
+		font-size: xx-large;
 	}
 
 	span {
