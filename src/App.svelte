@@ -45,13 +45,11 @@
 	
 	<div id="install">
 		<span id="install-text">
-			<h3>How to install (<a href="https://streamable.com/y4kanc" target="_blank">NOW IN VIDEO FORM</a>):</h3>
+			<h3>How to install:</h3>
 			1. Install <a href="https://www.tampermonkey.net/">Tampermonkey</a> or <a href="https://violentmonkey.github.io/get-it/">Violentmonkey</a> <br>
-			2. Copy the installation link <br>
-			3. Open the Tampermonkey/Violentmonkey settings <br>
-			4a. Tampermonkey: Open the "Utilities" tab, paste the URL inside the textbox and click Install <br>
-			4b. Violentmonkey: Click the plus icon, select "Install from URL", paste the URL and click OK <br>
-			5. You're done! <br>
+			2. Click the install link above <br>
+			3. Click "Install"/"Confirm installation" <br>
+			4. You're done! <br>
 		</span>	
 	</div>
 </main>
