@@ -3,18 +3,31 @@
 
 	let installUrl;
 	let version;
+	let installUrlDev;
+	let versionDev;
 
-	let promise = getScriptInfo();
+	let promise = getScriptInfo(false);
+	let promiseDev = getScriptInfo(true);
 
-	async function getScriptInfo() {
-		let response = await fetch(`https://vyneer.me/tools/script`);
+	async function getScriptInfo(dev) {
+		let url = dev ? "https://vyneer.me/tools/script/dev" : "https://vyneer.me/tools/script";
+		let response = await fetch(url);
 		if (response.ok) {
 			let data = await response.json();
-			installUrl = data['link'];
-			version = data['version'];
+			if (dev) {
+				installUrlDev = data['link'];
+				versionDev = data['version'];
+			} else {
+				installUrl = data['link'];
+				version = data['version'];
+			}
 			return response.ok;
 		} else {
-			version = "error";
+			if (dev) {
+				versionDev = "error";
+			} else {
+				version = "error";
+			}
 			throw new Error(response.status);
 		}
 	}
@@ -55,6 +68,17 @@
 </main>
 
 <footer>
+	<div style="float: left;">
+		{#await promiseDev}
+			<h2>Getting script version...</h2>
+		{:then}
+			{#if versionDev != "error"}
+				<a class="small-link" href="{installUrlDev}" target="_blank">Install beta/dev version {versionDev}</a>
+			{/if}
+		{:catch error}
+			<h2>HTTP error: {error}</h2>
+		{/await}
+	</div>
 	<div style="float: right;">
 		<a class="github-button" href="https://github.com/vyneer/dgg-chat-gui-scripts" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-size="large" aria-label="Contribute to vyneer/dgg-chat-gui-scripts on GitHub">Contribute</a>
 	</div>
@@ -63,6 +87,12 @@
 <style>
 	:global(body) {
 		background-color: #333333;
+	}
+
+	.small-link {
+		font-size: 0.8em;
+		font-family: "Roboto",Helvetica,"Trebuchet MS",Verdana,sans-serif;
+		color: #3a3a3a !important;
 	}
 
 	h1 {
