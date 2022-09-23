@@ -81,8 +81,10 @@
     <span id="install-text">
       <h3>How to install:</h3>
       1. Install <a href="https://www.tampermonkey.net/">Tampermonkey</a>, 
-      <a href="https://violentmonkey.github.io/get-it/">Violentmonkey</a> or  
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/">Violentmonkey (Firefox)</a> or  
       <a href="https://addons.mozilla.org/en-US/firefox/addon/firemonkey/">FireMonkey (Firefox)</a>
+      <br />
+      (Violentmonkey on Chromium-based browsers is currently broken, <a href="https://github.com/violentmonkey/violentmonkey/issues/1572">will get fixed in the next Violentmonkey release</a>)
       <br />
       (<a href="https://itunes.apple.com/us/app/userscripts/id1463298887">Userscripts (Safari)</a> is untested, but also seems to work)
       <br />
