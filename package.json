@@ -20,6 +20,8 @@
     "vite": "^2.8.0"
   },
   "dependencies": {
-    "github-buttons": "^2.21.1"
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "github-buttons": "^2.21.1",
+    "svelte-fa": "^3.0.4"
   }
 }

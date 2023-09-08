@@ -1,4 +1,7 @@
 <script lang="ts">
+  import Fa from 'svelte-fa'
+  import { faHome } from '@fortawesome/free-solid-svg-icons'
+
   import Feat from "./lib/Feat.svelte";
   import GHButton from "./lib/GitHubButton.svelte"
 
@@ -41,7 +44,7 @@
 </script>
 
 <header>
-  <a href="https://vyneer.me"><i class="home-button fas fa-home" /></a>
+  <a class="home-button" href="https://vyneer.me"><Fa icon={faHome} /></a>
 </header>
 
 <main>
